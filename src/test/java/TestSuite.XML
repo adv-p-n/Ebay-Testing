@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="e-bay Test Suite">
+  <test name="User Registeration">
+  	<groups>
+        <run>
+            <include name="registration"/>
+        </run>
+    </groups>
+    <classes>
+      <class name="com.ebay.pom.tests.RegistrationTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="User Login">
+        <groups>
+            <run>
+                <include name="login"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.ebay.pom.tests.LoginTest"/>
+        </classes>
+    </test>
+</suite> <!-- Suite -->
