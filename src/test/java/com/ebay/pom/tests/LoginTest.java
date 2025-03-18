@@ -21,7 +21,6 @@ public class LoginTest extends BaseTestPage {
         loginPage = new LoginPage(driver);
     }
 
-    @Test(groups = "login", dependsOnGroups = "registration")
     public void testLogin() throws Exception {
         driver.get("https://www.ebay.com/");
         loginPage.goToLogin();
@@ -42,4 +41,6 @@ public class LoginTest extends BaseTestPage {
         System.out.println("✅ Successfully Logged In");
     }
 
+
 }
+

@@ -3,4 +3,5 @@
 <testsuite ignored="0" hostname="IBM-159MB54" failures="0" tests="2" name="Default test" time="26.731" errors="0" timestamp="2025-03-18T16:28:50 IST">
   <testcase classname="com.ebay.pom.tests.SearchTest" name="testSearchProduct" time="10.566"/>
   <testcase classname="com.ebay.pom.tests.SearchTest" name="testAddToCart" time="12.458"/>
+
 </testsuite> <!-- Default test -->
