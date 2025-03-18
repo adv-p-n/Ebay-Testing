@@ -1,111 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-14T12:07:53 IST" name="Default suite" finished-at="2025-03-14T12:08:32 IST" duration-ms="39128">
+  <suite started-at="2025-03-18T16:29:40 IST" name="eBay Test Suite" finished-at="2025-03-18T16:30:31 IST" duration-ms="50824">
     <groups>
+      <group name="search">
+        <method signature="SearchTest.testSearchProduct()[pri:1, instance:com.ebay.pom.tests.SearchTest@66d18979]" name="testSearchProduct" class="com.ebay.pom.tests.SearchTest"/>
+      </group> <!-- search -->
       <group name="registration">
-        <method signature="RegistrationTest.testUserRegistration()[pri:0, instance:com.ebay.pom.tests.RegistrationTest@5fbe4146]" name="testUserRegistration" class="com.ebay.pom.tests.RegistrationTest"/>
+        <method signature="RegistrationTest.testUserRegistration()[pri:0, instance:com.ebay.pom.tests.RegistrationTest@43c1b556]" name="testUserRegistration" class="com.ebay.pom.tests.RegistrationTest"/>
       </group> <!-- registration -->
       <group name="login">
-        <method signature="LoginTest.testLogin()[pri:0, instance:com.ebay.pom.tests.LoginTest@394df057]" name="testLogin" class="com.ebay.pom.tests.LoginTest"/>
+        <method signature="LoginTest.testLogin()[pri:0, instance:com.ebay.pom.tests.LoginTest@c0c2f8d]" name="testLogin" class="com.ebay.pom.tests.LoginTest"/>
       </group> <!-- login -->
+      <group name="cart">
+        <method signature="SearchTest.testAddToCart()[pri:2, instance:com.ebay.pom.tests.SearchTest@66d18979]" name="testAddToCart" class="com.ebay.pom.tests.SearchTest"/>
+      </group> <!-- cart -->
     </groups>
-    <test started-at="2025-03-14T12:07:53 IST" name="Default test" finished-at="2025-03-14T12:08:32 IST" duration-ms="39128">
-      <class name="com.ebay.pom.tests.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.ebay.pom.tests.LoginTest@394df057]" started-at="2025-03-14T12:08:20 IST" name="setup" finished-at="2025-03-14T12:08:26 IST" duration-ms="6022" status="PASS">
+    <test started-at="2025-03-18T16:29:40 IST" name="eBay Tests" finished-at="2025-03-18T16:30:31 IST" duration-ms="50824">
+      <class name="com.ebay.pom.tests.SearchTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ebay.pom.tests.SearchTest@66d18979]" started-at="2025-03-18T16:30:07 IST" name="setup" finished-at="2025-03-18T16:30:09 IST" duration-ms="1711" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testLogin()[pri:0, instance:com.ebay.pom.tests.LoginTest@394df057]" started-at="2025-03-14T12:08:26 IST" name="testLogin" depends-on-groups="registration" finished-at="2025-03-14T12:08:32 IST" duration-ms="5826" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"link text","selector":"Skip for now"}
-  (Session info: chrome=134.0.6998.89)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a46aed50cd2234f0a072782369309966, findElement {using=link text, value=Skip for now}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\ADVAIT~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50443}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50443/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a46aed50cd2234f0a072782369309966]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Skip for now"}
-  (Session info: chrome=134.0.6998.89)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.29.0', revision: '5fc1ec94cb'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a46aed50cd2234f0a072782369309966, findElement {using=link text, value=Skip for now}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\ADVAIT~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50443}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50443/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a46aed50cd2234f0a072782369309966
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at com.ebay.pom.tests.LoginTest.testLogin(LoginTest.java:37)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="testSearchProduct()[pri:1, instance:com.ebay.pom.tests.SearchTest@66d18979]" started-at="2025-03-18T16:30:09 IST" name="testSearchProduct" finished-at="2025-03-18T16:30:17 IST" duration-ms="7686" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchProduct -->
+        <test-method signature="testAddToCart()[pri:2, instance:com.ebay.pom.tests.SearchTest@66d18979]" started-at="2025-03-18T16:30:17 IST" name="testAddToCart" finished-at="2025-03-18T16:30:30 IST" depends-on-methods="com.ebay.pom.tests.SearchTest.testSearchProduct" duration-ms="13603" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddToCart -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ebay.pom.tests.SearchTest@66d18979]" started-at="2025-03-18T16:30:30 IST" name="teardown" finished-at="2025-03-18T16:30:31 IST" duration-ms="518" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.ebay.pom.tests.SearchTest -->
+      <class name="com.ebay.pom.tests.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ebay.pom.tests.LoginTest@c0c2f8d]" started-at="2025-03-18T16:29:56 IST" name="setup" finished-at="2025-03-18T16:29:58 IST" duration-ms="1540" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testLogin()[pri:0, instance:com.ebay.pom.tests.LoginTest@c0c2f8d]" started-at="2025-03-18T16:29:58 IST" name="testLogin" depends-on-groups="registration" finished-at="2025-03-18T16:30:07 IST" duration-ms="9183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ebay.pom.tests.LoginTest@394df057]" started-at="2025-03-14T12:08:32 IST" name="teardown" finished-at="2025-03-14T12:08:32 IST" duration-ms="425" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ebay.pom.tests.LoginTest@c0c2f8d]" started-at="2025-03-18T16:30:07 IST" name="teardown" finished-at="2025-03-18T16:30:07 IST" duration-ms="357" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.ebay.pom.tests.LoginTest -->
       <class name="com.ebay.pom.tests.RegistrationTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.ebay.pom.tests.RegistrationTest@5fbe4146]" started-at="2025-03-14T12:07:53 IST" name="setup" finished-at="2025-03-14T12:08:00 IST" duration-ms="6589" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ebay.pom.tests.RegistrationTest@43c1b556]" started-at="2025-03-18T16:29:40 IST" name="setup" finished-at="2025-03-18T16:29:43 IST" duration-ms="2585" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testUserRegistration()[pri:0, instance:com.ebay.pom.tests.RegistrationTest@5fbe4146]" started-at="2025-03-14T12:08:00 IST" name="testUserRegistration" finished-at="2025-03-14T12:08:19 IST" duration-ms="19642" status="PASS">
+        <test-method signature="testUserRegistration()[pri:0, instance:com.ebay.pom.tests.RegistrationTest@43c1b556]" started-at="2025-03-18T16:29:43 IST" name="testUserRegistration" finished-at="2025-03-18T16:29:56 IST" duration-ms="13095" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserRegistration -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ebay.pom.tests.RegistrationTest@5fbe4146]" started-at="2025-03-14T12:08:19 IST" name="teardown" finished-at="2025-03-14T12:08:20 IST" duration-ms="497" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ebay.pom.tests.RegistrationTest@43c1b556]" started-at="2025-03-18T16:29:56 IST" name="teardown" finished-at="2025-03-18T16:29:56 IST" duration-ms="416" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.ebay.pom.tests.RegistrationTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- eBay Tests -->
+  </suite> <!-- eBay Test Suite -->
 </testng-results>
