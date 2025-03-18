@@ -27,18 +27,21 @@ public class LoginTest {
         loginPage.goToLogin();
     }
 
-    @Test(groups = "login", dependsOnGroups = "registration")
+    @Test(groups = "login")
     public void testLogin() throws Exception {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(2));
         loginPage.enterUsername("harikrishna3938@gmail.com");
-    	wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("pass"))));
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("pass"))));
         loginPage.enterPassword("Alan@admin200");
         loginPage.clickLogin();
-        By skiplnk=(By.linkText("Skip for now"));
-        if(driver.findElement(skiplnk).isDisplayed()) {driver.findElement(skiplnk).click();}
-        Thread.sleep(5000);
-        Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"gh-logo\"]")).isDisplayed());
-        System.out.println("Successfully LoggedIn");
+        
+        // Wait for skip link and click if visible (uncomment if needed)
+        // WebElement skipLink = driver.findElement(By.linkText("Skip for now"));
+        // if(skipLink.isDisplayed()) { skipLink.click(); }
+
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id=\"gh-logo\"]"))));
+        Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"gh-logo\"]")).isDisplayed(), "Login failed!");
+        System.out.println("Successfully Logged In");
     }
 
     @AfterClass
