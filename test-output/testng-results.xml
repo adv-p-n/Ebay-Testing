@@ -1,120 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-18T11:51:17 IST" name="Default suite" finished-at="2025-03-18T11:51:19 IST" duration-ms="1483">
+  <suite started-at="2025-03-18T16:29:40 IST" name="eBay Test Suite" finished-at="2025-03-18T16:30:31 IST" duration-ms="50824">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.ebay.testrunner.TestRunner@6236eb5f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
+      <group name="search">
+        <method signature="SearchTest.testSearchProduct()[pri:1, instance:com.ebay.pom.tests.SearchTest@66d18979]" name="testSearchProduct" class="com.ebay.pom.tests.SearchTest"/>
+      </group> <!-- search -->
+      <group name="registration">
+        <method signature="RegistrationTest.testUserRegistration()[pri:0, instance:com.ebay.pom.tests.RegistrationTest@43c1b556]" name="testUserRegistration" class="com.ebay.pom.tests.RegistrationTest"/>
+      </group> <!-- registration -->
+      <group name="login">
+        <method signature="LoginTest.testLogin()[pri:0, instance:com.ebay.pom.tests.LoginTest@c0c2f8d]" name="testLogin" class="com.ebay.pom.tests.LoginTest"/>
+      </group> <!-- login -->
+      <group name="cart">
+        <method signature="SearchTest.testAddToCart()[pri:2, instance:com.ebay.pom.tests.SearchTest@66d18979]" name="testAddToCart" class="com.ebay.pom.tests.SearchTest"/>
+      </group> <!-- cart -->
     </groups>
-    <test started-at="2025-03-18T11:51:17 IST" name="Default test" finished-at="2025-03-18T11:51:19 IST" duration-ms="1483">
-      <class name="com.ebay.testrunner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.ebay.testrunner.TestRunner@6236eb5f]" started-at="2025-03-18T11:51:17 IST" name="setUpClass" finished-at="2025-03-18T11:51:19 IST" duration-ms="1148" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@2f162cc0]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2025-03-18T16:29:40 IST" name="eBay Tests" finished-at="2025-03-18T16:30:31 IST" duration-ms="50824">
+      <class name="com.ebay.pom.tests.SearchTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ebay.pom.tests.SearchTest@66d18979]" started-at="2025-03-18T16:30:07 IST" name="setup" finished-at="2025-03-18T16:30:09 IST" duration-ms="1711" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.ebay.testrunner.TestRunner@6236eb5f]" started-at="2025-03-18T11:51:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-18T11:51:19 IST" duration-ms="183" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User adds a product to the cart"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Add Product to Cart"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
-            <message>
-              <![CDATA[The step 'I am on the eBay homepage' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("I am on the eBay homepage")
-public void i_am_on_the_e_bay_homepage() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("I search for {string}")
-public void i_search_for(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("I select the first product")
-public void i_select_the_first_product() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("I add the product to the cart")
-public void i_add_the_product_to_the_cart() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'I am on the eBay homepage' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("I am on the eBay homepage")
-public void i_am_on_the_e_bay_homepage() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("I search for {string}")
-public void i_search_for(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("I select the first product")
-public void i_select_the_first_product() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("I add the product to the cart")
-public void i_add_the_product_to_the_cart() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:136)
-at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
-at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
-at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
-at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1575)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+        </test-method> <!-- setup -->
+        <test-method signature="testSearchProduct()[pri:1, instance:com.ebay.pom.tests.SearchTest@66d18979]" started-at="2025-03-18T16:30:09 IST" name="testSearchProduct" finished-at="2025-03-18T16:30:17 IST" duration-ms="7686" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.ebay.testrunner.TestRunner@6236eb5f]" started-at="2025-03-18T11:51:19 IST" name="tearDownClass" finished-at="2025-03-18T11:51:19 IST" duration-ms="38" status="PASS">
+        </test-method> <!-- testSearchProduct -->
+        <test-method signature="testAddToCart()[pri:2, instance:com.ebay.pom.tests.SearchTest@66d18979]" started-at="2025-03-18T16:30:17 IST" name="testAddToCart" finished-at="2025-03-18T16:30:30 IST" depends-on-methods="com.ebay.pom.tests.SearchTest.testSearchProduct" duration-ms="13603" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.ebay.testrunner.TestRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- testAddToCart -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ebay.pom.tests.SearchTest@66d18979]" started-at="2025-03-18T16:30:30 IST" name="teardown" finished-at="2025-03-18T16:30:31 IST" duration-ms="518" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.ebay.pom.tests.SearchTest -->
+      <class name="com.ebay.pom.tests.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ebay.pom.tests.LoginTest@c0c2f8d]" started-at="2025-03-18T16:29:56 IST" name="setup" finished-at="2025-03-18T16:29:58 IST" duration-ms="1540" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testLogin()[pri:0, instance:com.ebay.pom.tests.LoginTest@c0c2f8d]" started-at="2025-03-18T16:29:58 IST" name="testLogin" depends-on-groups="registration" finished-at="2025-03-18T16:30:07 IST" duration-ms="9183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ebay.pom.tests.LoginTest@c0c2f8d]" started-at="2025-03-18T16:30:07 IST" name="teardown" finished-at="2025-03-18T16:30:07 IST" duration-ms="357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.ebay.pom.tests.LoginTest -->
+      <class name="com.ebay.pom.tests.RegistrationTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ebay.pom.tests.RegistrationTest@43c1b556]" started-at="2025-03-18T16:29:40 IST" name="setup" finished-at="2025-03-18T16:29:43 IST" duration-ms="2585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testUserRegistration()[pri:0, instance:com.ebay.pom.tests.RegistrationTest@43c1b556]" started-at="2025-03-18T16:29:43 IST" name="testUserRegistration" finished-at="2025-03-18T16:29:56 IST" duration-ms="13095" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserRegistration -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ebay.pom.tests.RegistrationTest@43c1b556]" started-at="2025-03-18T16:29:56 IST" name="teardown" finished-at="2025-03-18T16:29:56 IST" duration-ms="416" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.ebay.pom.tests.RegistrationTest -->
+    </test> <!-- eBay Tests -->
+  </suite> <!-- eBay Test Suite -->
 </testng-results>
