@@ -1,16 +1,18 @@
 package com.ebay.pom.tests;
 
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.ebay.pom.pages.BaseTestPage;
 import com.ebay.pom.pages.SearchPage;
-import com.ebay.utils.DriverManager;
+import com.ebay.utils.ExcelReader;
 
-import org.openqa.selenium.By;
-import org.testng.Assert;
-import org.testng.annotations.*;
-
-public class SearchTest extends BaseTestPage{
+public class SearchTest extends BaseTestPage {
 
     SearchPage searchPage;
 
@@ -20,26 +22,32 @@ public class SearchTest extends BaseTestPage{
         searchPage = new SearchPage(driver);
     }
 
-    @Test(priority = 1, groups = "search")
-    public void testSearchProduct() throws Exception {
+    @DataProvider(name = "searchData")
+    public Object[][] getSearchData() throws IOException {
+        return ExcelReader.readExcelData("src/test/resources/TestingData.xlsx", "Price");
+    }
+
+    @Test(dataProvider = "searchData", groups = "search")
+    public void testSearchProduct(String productName, String expectedPrice) throws Exception {
         driver.get("https://www.ebay.com/");
-        searchPage.searchProduct("Laptop");
-        Assert.assertTrue(driver.getTitle().contains("Laptop"), "Search results page did not load properly!");
-        System.out.println("Searching for Laptop");
-    }
+        searchPage.searchProduct(productName);
+        
+        String formattedPrice = expectedPrice.replaceAll("[^0-9.]", "");
+        double expectedProductPrice = Double.parseDouble(formattedPrice);
+        double actualPrice = Double.parseDouble(searchPage.getFirstProductPrice());
 
-    @Test(priority = 2, dependsOnMethods = "testSearchProduct", groups = "cart")
-    public void testAddToCart() throws Exception {
-        searchPage.clickFirstProduct();
-        searchPage.addToCart();
-        System.out.println("Adding First Product to Cart");
-        // Validate that the product was added (Assume a confirmation message exists)
-        Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div/div[1]/h1")).isDisplayed(), "Product not added to cart!");
-        System.out.println("Product Added Successfully");
-    }
-
-    @AfterClass
-    public void teardown() {
-        DriverManager.quitDriver();
+        if (actualPrice <= expectedProductPrice) {
+            System.out.println("✅ Verified price for " + productName + ": " + actualPrice);
+            
+            // Add product to cart
+            searchPage.clickFirstProduct(expectedProductPrice);
+            searchPage.addToCart();
+            Assert.assertTrue(driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div/div[1]/h1")).isDisplayed(), 
+                "Product not added to cart!");
+            System.out.println("🛒 Product added to cart: " + productName);
+            searchPage.switchBackToMainTab();
+        } else {
+            Assert.fail("❌ Price mismatch! Expected ≤ $" + expectedProductPrice + " but found $" + actualPrice);
+        }
     }
 }

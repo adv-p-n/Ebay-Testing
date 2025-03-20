@@ -3,13 +3,13 @@
 <suite name="Failed suite [eBay Test Suite]">
   <test thread-count="5" name="eBay Tests(failed)">
     <classes>
-      <class name="com.ebay.pom.tests.RegistrationTest">
+      <class name="com.ebay.pom.tests.SearchTest">
         <methods>
+          <include name="testSearchProduct" invocation-numbers="0"/>
           <include name="setup"/>
-          <include name="testUserRegistration"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.ebay.pom.tests.RegistrationTest -->
+      </class> <!-- com.ebay.pom.tests.SearchTest -->
     </classes>
   </test> <!-- eBay Tests(failed) -->
 </suite> <!-- Failed suite [eBay Test Suite] -->
