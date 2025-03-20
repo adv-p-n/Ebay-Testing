@@ -27,7 +27,7 @@ public class SearchTest extends BaseTestPage {
         return ExcelReader.readExcelData("src/test/resources/TestingData.xlsx", "Price");
     }
 
-    @Test(dataProvider = "searchData", groups = "search")
+    @Test(priority=3, dataProvider = "searchData", groups = "search")
     public void testSearchProduct(String productName, String expectedPrice) throws Exception {
         driver.get("https://www.ebay.com/");
         searchPage.searchProduct(productName);

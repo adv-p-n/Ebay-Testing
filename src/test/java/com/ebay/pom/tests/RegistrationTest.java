@@ -22,7 +22,7 @@ public class RegistrationTest extends BaseTestPage {
         registrationPage = new RegistrationPage(driver);  // Now driver is initialized
     }
 
-    @Test(groups = "registration")
+    @Test(priority=1 ,groups = "registration")
     public void testUserRegistration() throws Exception {
         driver.get("https://www.ebay.com/");
         driver.findElement(By.linkText("register")).click();

@@ -21,7 +21,7 @@ public class LoginTest extends BaseTestPage {
         loginPage = new LoginPage(driver);
     }
     
-    @Test(groups = "login" ,dependsOnGroups="registration")
+    @Test(priority=2, groups = "login" ,dependsOnGroups="registration")
     public void testLogin() throws Exception {
         driver.get("https://www.ebay.com/");
         loginPage.goToLogin();
